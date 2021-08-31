@@ -1,0 +1,68 @@
+:root {
+  --dark: black;
+  --light: #f2f1f7;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 65%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  background-color: var(--dark);
+}
+
+.light-mode {
+  background-color: var(--light);
+}
+
+.main-container {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-container .item {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 10px;
+  color: rgb(110, 110, 110);
+}
+
+@media screen and (max-width: 1070px) {
+  .main-container {
+    height: 250vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .main-container .item {
+    width: 65%;
+  }
+
+  .main-container .item-1 {
+    order: 2;
+  }
+  .main-container .item-2 {
+    order: 1;
+  }
+  .main-container .item-3 {
+    order: 3;
+  }
+}
